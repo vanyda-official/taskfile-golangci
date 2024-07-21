@@ -50,5 +50,5 @@ To use this `Taskfile`, include it in your project's `Taskfile`. For example:
 version: '3'
 
 includes:
-  golangci: https://raw.githubusercontent.com/hoomy-official/taskfile-golangci/main/tasks.yaml
+  golangci: https://raw.githubusercontent.com/vanyda-official/taskfile-golangci/main/tasks.yaml
 ```
