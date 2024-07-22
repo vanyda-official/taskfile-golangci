@@ -68,12 +68,10 @@ tasks:
   ci:
     desc: Generate GitHub Action
     summary: |
-      Generate golang-ci configuration.
-      This configuration must be used as is and should not be modified.
-      Any modification can be overwriting in the future.
+      Generate a standardized golangci-lint GitHub Action configuration.
+      This configuration is auto-generated and should not be manually modified as it can be overwritten.
       
       The generated file should be excluded from commits.
-
     vars:
       GITHUBACTION_FILENAME: '{{.GITHUBACTION_FILENAME | default .DEFAULT_GOLANGCI_GITHUBACTION_FILENAME}}'
     cmds:
@@ -85,8 +83,9 @@ tasks:
         on:
           push:
             branches:
-              - master
+              - develop
               - main
+              - master
           pull_request:
         
         permissions:
